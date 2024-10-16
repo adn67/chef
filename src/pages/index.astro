@@ -1,16 +1,25 @@
 ---
-
+const pageTitle = "Las recetas de Po";
+import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
+import "../styles/global.css"
 ---
 
 <html lang="es">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Recetas</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+	<Navigation />
+    <h1>Título principal en página index.astro</h1>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aliquam quia nesciunt deleniti iure dolorum ipsa labore, maxime possimus repudiandae hic soluta doloremque consequatur tenetur debitis repellendus molestias dolores incidunt?</p>
+	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, odit.</p>
+	<Footer />
+	
+  </body>
 </html>
+
