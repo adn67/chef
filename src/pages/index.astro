@@ -3,5 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Las recetas de Po";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>[Título en index.astro]</h2>
+  <img src="../../public/images/The_Swedish_Chef.webp" alt="Swedish Chef from the Muppet's show">
 </BaseLayout>
+
+
+
+<style>
+  img{
+    mask-image: linear-gradient(
+      black 98%, transparent
+    );
+    max-width: 70vw;
+    /* transition: transform .75s;*/
+  }
+  img:hover {
+  transform: scaleX(-1);
+}
+</style>
