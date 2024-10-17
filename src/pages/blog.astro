@@ -1,8 +1,8 @@
 ---
-import Footer from "../components/Footer.astro"
-import Navigation from "../components/Navigation.astro"
-import "../styles/global.css"
-const pageTitle ="Recetario"
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+const pageTitle = "Recetario";
 ---
 
 <html lang="es">
@@ -12,14 +12,12 @@ const pageTitle ="Recetario"
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Navigation />
-
+    <Header />
     <h1>Título principal en blog.astro</h1>
     <p>Esto es un párrafo en blog.astro.</p>
     <ul>
       <li><a href="/posts/receta_01/">Arroz con leche</a></li>
       <li><a href="/posts/receta_02/">Budín de naranja</a></li>
-    
     </ul>
     <Footer />
   </body>
