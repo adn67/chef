@@ -1,34 +1,7 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Las recetas de Po";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import "../styles/global.css";
 ---
-
-<html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-
-  <body>
-    <Header />
-    <h1>Título principal en página index.astro</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-      aliquam quia nesciunt deleniti iure dolorum ipsa labore, maxime possimus
-      repudiandae hic soluta doloremque consequatur tenetur debitis repellendus
-      molestias dolores incidunt?
-    </p>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, odit.
-    </p>
-    <Footer />
-    <script>
-      import "../scripts/menu.js";
-    </script>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <h2>[Título en index.astro]</h2>
+</BaseLayout>
