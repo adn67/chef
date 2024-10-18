@@ -18,28 +18,26 @@ const { Content } = await render(receta);
 ---
 
 <BaseLayout pageTitle={`Po cocina: ${title}`}>
-  <article class="container-receta">
-    <div class="ficha-receta">
-      <Content />
-    </div>
+  <article class="ficha-receta">
+    <Content />
   </article>
 </BaseLayout>
 
 <style>
-  .container-receta {
+  .ficha-receta {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 80%;
     margin: 0 auto;
-    border: 1px solid gray;
-  }
-
-  .ficha-receta {
-    padding: 50px 80px;
-    background-color: #fff;
+    padding: 20px 50px;
+    max-width: 80%;
     font-family: "Courier New", Courier, monospace;
+    font-size: 1.125em;
     color: #111;
-    width: 100%;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: 5px 5px 30px 3px #d9d9d9;
   }
 </style>

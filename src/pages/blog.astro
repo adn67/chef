@@ -11,9 +11,7 @@ const recetas = await getCollection("recetario");
     <section aria-label="recetas">
       <div class="centrado">
         {
-          recetas.map((receta) => {
-            const { slug, data } = receta;
-            const { title, category, ingredients, tags } = data;
+          recetas.map(({ slug, data: { title, category, ingredients, tags } }) => {
             return (
               <article>
                 <h3>{category}: </h3>
