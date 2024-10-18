@@ -1,7 +1,9 @@
 ---
 title: "Arroz con leche"
-description: "Recetas dulces: postre"
+category: "postre"
+ingredients: ["arroz", "leche", "azúcar"]
 tags: ["postre", "arroz", "leche"]
+
 ---
 
 # Arroz con leche

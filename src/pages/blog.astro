@@ -1,13 +1,42 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+
 const pageTitle = "Recetario";
+const recetas = await getCollection("recetario");
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h1>Título principal en blog.astro</h1>
-  <p>Esto es un párrafo en blog.astro.</p>
-  <ul>
-    <li><a href="/posts/receta_01/">Arroz con leche</a></li>
-    <li><a href="/posts/receta_02/">Budín de naranja</a></li>
-  </ul>
+  <div class="centrado">
+    <section aria-label="recetas">
+      <div class="centrado">
+        {
+          recetas.map((receta) => {
+            const { slug, data } = receta;
+            const { title, category, ingredients, tags } = data;
+            return (
+              <article>
+                <h3>{category}: </h3>
+                <a href={`/receta/${slug}`}>{title}</a>
+              </article>
+            );
+          })
+        }
+      </div>
+    </section>
+  </div>
 </BaseLayout>
+
+<style>
+  .centrado {
+    display: grid;
+    place-content: center;
+  }
+
+  h3 {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+</style>

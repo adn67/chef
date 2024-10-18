@@ -3,12 +3,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Las recetas de Po";
 ---
 <BaseLayout pageTitle={pageTitle}>
+  <h1>{pageTitle}</h1>
   <img src="../../public/images/The_Swedish_Chef.webp" alt="Swedish Chef from the Muppet's show">
 </BaseLayout>
 
 
 
 <style>
+
+  h1{
+    font-size: 4em;
+  }
   img{
     mask-image: linear-gradient(
       black 98%, transparent

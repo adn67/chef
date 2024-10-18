@@ -1,0 +1,45 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const recetario = await getCollection("recetario");
+  return recetario.map((receta) => ({
+    params: { slug: receta.slug },
+    props: { receta },
+  }));
+}
+const { receta } = Astro.props;
+const { data } = receta;
+const { title, category, ingredients, tags } = data;
+
+const { Content } = await render(receta);
+---
+
+<BaseLayout pageTitle={`Po cocina: ${title}`}>
+  <article class="container-receta">
+    <div class="ficha-receta">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .container-receta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+    border: 1px solid gray;
+  }
+
+  .ficha-receta {
+    padding: 50px 80px;
+    background-color: #fff;
+    font-family: "Courier New", Courier, monospace;
+    color: #111;
+    width: 100%;
+  }
+</style>

@@ -1,6 +1,7 @@
 ---
 title: "Budín de naranja"
-description: "Recetas dulces: torta"
+category: "torta"
+ingredients: ["naranjas", "harina", "azúcar", "huevos", "aceite"]
 tags: ["torta", "budín", "naranja"]
 ---
 
@@ -13,7 +14,7 @@ tags: ["torta", "budín", "naranja"]
 - harina leudante: 2 tazas
 - azúcar: 1 taza
 - huevos: 3
-- ceite neutro (girasol o maíz): 1 taza
+- aceite neutro (girasol o maíz): 1 taza
 
 
 ## Procedimiento
